@@ -1,4 +1,4 @@
-
+bhai kuch dikh rha hai kya?- OM
 // haloooo
 struct tNode* createNode(){
 	struct tNode* newNode = (struct tNode*)malloc(sizeof(struct tNode));
