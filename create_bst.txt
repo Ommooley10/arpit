@@ -1,8 +1,4 @@
-struct tNode{
-	int data;
-	struct tNode *left;
-	struct tNode *right;
-};
+
 // haloooo
 struct tNode* createNode(){
 	struct tNode* newNode = (struct tNode*)malloc(sizeof(struct tNode));
