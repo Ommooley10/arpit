@@ -1,0 +1,32 @@
+struct tNode{
+	int data;
+	struct tNode *left;
+	struct tNode *right;
+};
+
+struct tNode* createNode(){
+	struct tNode* newNode = (struct tNode*)malloc(sizeof(struct tNode));
+	return newNode;
+}
+
+struct tNode* insertBST(struct tNode *root,int key){
+	if(root == NULL){
+		root = createNode();
+		if(root == NULL)
+			printf("Allocation failed");
+		root->data = key;
+		root->left = root->right = NULL;
+	}
+	else if(key<root->data){
+		root->left = insertBST(root->left,key);
+	}
+	else if(key>root->data){
+		root->right = insertBST(root->right,key);
+	}
+	else{
+		printf("Duplicate");
+	}
+	return root;
+}
+
+
